@@ -26,3 +26,10 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 // 画面サイズを横幅と高さに合わせる
 document.body.appendChild(renderer.DOMElement);
 // body要素に対して、どこに描画するか？の設定
+
+// ボックスのサイズ決定、メッシュ
+const geometry = new THREE.BOXGeometry(2, 2, 2);
+// ()内は幅,高さ,奥行き
+
+// マテリアル(材質)
+const material = new THREE.MeshBasicMaterial({color: 0x0000ff});
