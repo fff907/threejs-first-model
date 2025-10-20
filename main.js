@@ -27,8 +27,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.DOMElement);
 // body要素に対して、どこに描画するか？の設定
 
-// ボックスのサイズ決定、メッシュ
-const geometry = new THREE.BOXGeometry(2, 2, 2);
+// ジオメトリ(ボックスのサイズ決定)
+const geometry = new THREE.BoxGeometry(2, 2, 2);
 // ()内は幅,高さ,奥行き
 
 // マテリアル(材質)
@@ -40,3 +40,17 @@ const cube = new THREE.Mesh(geometry, material);
 
 scene.add(cube);
 // シーンへキューブを表示
+
+// カメラの位置
+camera.position.z = 5;
+// デフォルトだと近すぎて見えない,設定するとカメラが引く
+
+// アニメーション制御
+function animate() {
+    requestAnimationFrame(animate);
+    // 何度も'animate'をコールバックして3Dを描画する
+
+    renderer.render(scene, camera);
+}
+
+animate();
