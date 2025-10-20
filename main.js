@@ -33,3 +33,6 @@ const geometry = new THREE.BOXGeometry(2, 2, 2);
 
 // マテリアル(材質)
 const material = new THREE.MeshBasicMaterial({color: 0x0000ff});
+
+// メッシュ(ジオメトリ＋マテリアル)
+const cube = new THREE.Mesh(geometry, material);
