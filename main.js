@@ -24,7 +24,7 @@ const renderer = new THREE.WebGLRenderer();
 // WebGLRenderer：3Dオブジェクトを表現するためのもの
 renderer.setSize(window.innerWidth, window.innerHeight);
 // 画面サイズを横幅と高さに合わせる
-document.body.appendChild(renderer.DOMElement);
+document.body.appendChild(renderer.DomElement);
 // body要素に対して、どこに描画するか？の設定
 
 // ジオメトリ(ボックスのサイズ決定)
