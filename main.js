@@ -18,3 +18,11 @@ const camera = new THREE.PerspectiveCamera(
 // near: カメラからの最小描画距離。これより近いオブジェクトは描画されない。
 // far: カメラからの最大描画距離。これより遠いオブジェクトは描画されない。
 // おおよそは上記例の引数をデフォルトと認識しておく。
+
+// レンダラー
+const renderer = new THREE.WebGLRenderer();
+// WebGLRenderer：3Dオブジェクトを表現するためのもの
+renderer.setSize(window.innerWidth, window.innerHeight);
+// 画面サイズを横幅と高さに合わせる
+document.body.appendChild(renderer.DOMElement);
+// body要素に対して、どこに描画するか？の設定
