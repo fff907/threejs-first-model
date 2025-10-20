@@ -37,7 +37,10 @@ function init() {
     // ()内は幅,高さ,奥行き
 
     // マテリアル(材質)
-    const material = new THREE.MeshBasicMaterial({color: 0x0000ff});
+    // 設定例：const material = new THREE.MeshBasicMaterial({color: 0x0000ff});
+    const texture = new THREE.TextureLoader().load("./img/wall.png");
+    const material = new THREE.MeshBasicMaterial({map: texture});
+    // 画像を読み込んでオブジェクトに使いたい場合の設定
 
     // メッシュ(ジオメトリ＋マテリアル)
     cube = new THREE.Mesh(geometry, material);
@@ -73,6 +76,5 @@ function onWindowResize () {
 // 上記 関数をウィンドウサイズ変更時に呼ぶ処理
 window.addEventListener("resize", onWindowResize);
 
-init();
-// ここで初期化
+init(); // ここで初期化
 animate();
