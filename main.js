@@ -39,4 +39,4 @@ const cube = new THREE.Mesh(geometry, material);
 // キューブを追加
 
 scene.add(cube);
-// キューブを表示
+// シーンへキューブを表示
