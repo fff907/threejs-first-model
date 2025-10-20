@@ -18,7 +18,7 @@ function init() {
     );
     // カメラは'4'つ引数を取る
     // new THREE.PerspectiveCamera(視野角, アスペクト比, near, far)
-    // 視野角 (fov): カメラの視野角を度数で指定。標準は45度。
+    // 視野角 (fov): カメラの視野角を度数で指定。標準は45度。数字を上げると画角が引く。
     // アスペクト比: カメラの横幅と縦幅の比率を指定。通常はcanvasの幅と高さを基に計算する。
     // near: カメラからの最小描画距離。これより近いオブジェクトは描画されない。
     // far: カメラからの最大描画距離。これより遠いオブジェクトは描画されない。
@@ -27,7 +27,7 @@ function init() {
     // レンダラー
     renderer = new THREE.WebGLRenderer({ antialias: true });
     // WebGLRenderer：3Dオブジェクトを表現するためのもの
-    // antialias(アンチエイリアス)：画像のギザギザをなくす
+    // antialias(アンチエイリアス)：画像の角のギザギザをなくす。
     renderer.setSize(window.innerWidth, window.innerHeight);
     // 画面サイズを横幅と高さに合わせる
     document.body.appendChild(renderer.domElement);
