@@ -25,8 +25,9 @@ function init() {
     // おおよそは上記例の引数をデフォルトと認識しておく。
 
     // レンダラー
-    renderer = new THREE.WebGLRenderer();
+    renderer = new THREE.WebGLRenderer({ antialias: true });
     // WebGLRenderer：3Dオブジェクトを表現するためのもの
+    // antialias(アンチエイリアス)：画像のギザギザをなくす
     renderer.setSize(window.innerWidth, window.innerHeight);
     // 画面サイズを横幅と高さに合わせる
     document.body.appendChild(renderer.domElement);
@@ -76,5 +77,6 @@ function onWindowResize () {
 // 上記 関数をウィンドウサイズ変更時に呼ぶ処理
 window.addEventListener("resize", onWindowResize);
 
-init(); // ここで初期化
+init();
+// ここで初期化
 animate();
