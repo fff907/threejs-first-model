@@ -50,6 +50,9 @@ function animate() {
     requestAnimationFrame(animate);
     // 何度も'animate'をコールバックして3Dを描画する
 
+    cube.rotation.x += 0.01;
+    // ローテーションを付けることによってキューブ回転
+    
     renderer.render(scene, camera);
 }
 
