@@ -36,3 +36,7 @@ const material = new THREE.MeshBasicMaterial({color: 0x0000ff});
 
 // メッシュ(ジオメトリ＋マテリアル)
 const cube = new THREE.Mesh(geometry, material);
+// キューブを追加
+
+scene.add(cube);
+// キューブを表示
