@@ -51,8 +51,10 @@ function animate() {
     // 何度も'animate'をコールバックして3Dを描画する
 
     cube.rotation.x += 0.01;
-    // X軸を基に0.01ずつキューブ回転
-    
+    // X軸を基に0.01ずつキューブ縦回転
+    cube.rotation.x += 0.01;
+    // y軸を追加すると縦＋横＝斜めに回転
+
     renderer.render(scene, camera);
 }
 
