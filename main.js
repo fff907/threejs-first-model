@@ -58,4 +58,13 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+// ウィンドウサイズを変更時、3Dオブジェクトと背景のサイズを維持
+function onWindowResize () {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+// 上記 関数をウィンドウサイズ変更時に呼ぶ処理
+window.addEventListener("resize", onWindowResize);
+
 animate();
