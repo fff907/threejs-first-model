@@ -62,7 +62,7 @@ function animate() {
 
     cube.rotation.x += 0.01;
     // X軸を基に0.01ずつキューブ縦回転
-    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
     // y軸を追加すると縦＋横＝斜めに回転
 
     renderer.render(scene, camera);
